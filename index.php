@@ -47,7 +47,7 @@
     <button class="btn btn-primary" onclick="salvaDados()">Acessar</button>
 
     <!-- Botão de cadastro (ainda sem funcionalidade associada) -->
-    <button class="btn btn-primary">Cadastrar</button>
+    <a href="http://localhost/TCC_PAPINHO/frontend/frontend_cadastro.php" class="btn btn-primary">Cadastrar</a>
   </div>
 
   <script>

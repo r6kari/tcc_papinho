@@ -80,6 +80,10 @@ if (empty($id_inserido)) {
         'mensagem' => 'Não foi possível inserir.'
     ]);
 } else {
+    //esse trecho capta os dados de id e nome e ja loga apos salvar o formulario startando a session
+    session_start();
+    $_SESSION['id_responsavel'] = $id_inserido;
+    $_SESSION['nome_responsavel'] = $nome;
     // Retorna sucesso com o ID do novo usuário
     $retorno_da_api = [
         'status' => 'sucesso',

@@ -19,7 +19,7 @@
     crossorigin="anonymous" />
 
   <!-- Link para arquivo de estilos personalizados -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="http://localhost/TCC_PAPINHO/assets/css/style.css" />
 
   <title>Cadastro Responsável</title>
 </head>
@@ -154,14 +154,15 @@
       };
 
       // Envio dos dados via AJAX para o backend (PHP)
-      $.post("http://localhost/TCC_PAPINHO/backend_cadastro.php", body_backend)
+      $.post("http://localhost/TCC_PAPINHO/backend/backend_cadastro.php", body_backend)
         .then((variavel_com_retorno_da_api) => {
           console.log(variavel_com_retorno_da_api);
 
           if (variavel_com_retorno_da_api.status == "erro") {
-            alert(variavel_com_retorno_da_api);
+            alert("Erro ao cadastrar usuario");
           } else {
-            alert("Sucesso!");
+            window.location.href = "http://localhost/TCC_PAPINHO/frontend/frontend_home.php";
+
           }
         })
         .catch(() => {
